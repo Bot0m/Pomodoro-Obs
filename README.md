@@ -2,6 +2,13 @@
 
 ## 🇫🇷 Mode d'emploi
 
+- **Récupérer le projet**
+  ```bash
+  git clone git@github.com:Bot0m/Pomodoro-Obs.git
+  cd Pomodoro-Obs
+  ```
+  (ou via HTTPS si besoin)
+
 - **Installation OBS**
   1. Ouvre OBS → Sources → **+** → **Browser**.
   2. Coche **Local file** et sélectionne `index.html` dans le dossier.
@@ -29,6 +36,13 @@
   - Les réglages sont stockés dans le `localStorage` d’OBS.
 
 ## 🇬🇧 Usage
+
+- **Get the project**
+  ```bash
+  git clone git@github.com:Bot0m/Pomodoro-Obs.git
+  cd Pomodoro-Obs
+  ```
+  (or HTTPS if preferred)
 
 - **Install in OBS**
   1. OBS → Sources → **+** → **Browser**.
