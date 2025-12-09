@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro OBS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+  <main class="layout">
+    <section class="panel panel--primary">
+      <div class="card">
+        <p id="stateLabel" class="state__label">Focus Time</p>
+        <div class="card__timer">
+          <div class="ring">
+            <div class="ring__inner">
+              <div id="timerDisplay" class="timer__time">00:00</div>
+            </div>
+          </div>
+        </div>
+        <div class="progress-dots" aria-label="Progression du cycle">
+          <div id="cycleDots" class="progress-dots__dots"></div>
+        </div>
+        <p id="sessionMessage" class="timer__message" aria-live="polite"></p>
+        <button id="settingsToggle" class="settings-toggle" aria-label="Afficher/Masquer réglages">⚙</button>
+      </div>
+    </section>
+
+    <section class="panel panel--settings" id="settingsPanel">
+        <div class="panel__header">
+          <h2>Settings</h2>
+          <p>Durées, couleurs (hex) et textes. Sauvegarde locale.</p>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="focusDuration">Focus (minutes)</label>
+            <input type="number" id="focusDuration" min="1" step="1">
+          </div>
+          <div class="field">
+            <label for="shortBreakDuration">Pause courte (minutes)</label>
+            <input type="number" id="shortBreakDuration" min="1" step="1">
+          </div>
+          <div class="field">
+            <label for="longBreakDuration">Pause longue (minutes)</label>
+            <input type="number" id="longBreakDuration" min="1" step="1">
+          </div>
+          <div class="field">
+            <label for="cyclesBeforeLongBreak">Cycles (min 2 - max 8)</label>
+            <input type="number" id="cyclesBeforeLongBreak" min="2" max="8" step="1">
+          </div>
+          <div class="field">
+            <label for="bgColor">Background color (hex)</label>
+            <input type="text" id="bgColor" placeholder="#BA4949">
+          </div>
+          <div class="field">
+            <label for="textColor">Text color (hex)</label>
+            <input type="text" id="textColor" placeholder="#FFFFFF">
+          </div>
+          <div class="field field--checkbox">
+            <label for="soundEnabled">
+              <input type="checkbox" id="soundEnabled" checked>
+              Song alert
+            </label>
+          </div>
+        </div>
+
+        <div class="panel__footer">
+          <p class="save-hint" id="saveHint">Paramètres sauvegardés.</p>
+          <div class="footer-actions">
+            <div class="control-strip">
+              <button id="restartBtn" class="btn btn--circle" aria-label="Recommencer ce segment">⏮</button>
+              <button id="startPauseBtn" class="btn btn--circle btn--accent" aria-label="Démarrer ou Pause">▶</button>
+              <button id="skipBtn" class="btn btn--circle" aria-label="Passer au suivant">⏭</button>
+              <button id="resetBtn" class="btn btn--circle btn--ghost" type="button" aria-label="Reset session">⏹</button>
+            </div>
+            <div class="footer-actions__right">
+              <button id="resetSettingsBtn" class="btn btn--ghost" type="button">Défauts</button>
+              <button id="applyBtn" class="btn btn--accent" type="button">Appliquer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
