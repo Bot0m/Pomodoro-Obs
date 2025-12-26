@@ -1,6 +1,6 @@
 # Pomodoro OBS Widget
 
-## 🇫🇷 Mode d'emploi
+## Mode d'emploi
 
 - **Récupérer le projet**
   ```bash
@@ -35,7 +35,7 @@
   - Police : Inter (chargée via Google Fonts). Si aucune connexion, la police système sera utilisée.
   - Les réglages sont stockés dans le `localStorage` d’OBS.
 
-## 🇬🇧 Usage
+## Usage
 
 - **Get the project**
   ```bash
